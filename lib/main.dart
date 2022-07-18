@@ -7,6 +7,11 @@ void main() => runApp(XylophoneApp());
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({Key? key}) : super(key: key);
 
+  void playSound(int noteNumber) {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$noteNumber.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,56 +22,49 @@ class XylophoneApp extends StatelessWidget {
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.red),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note1.wav'));
+                  playSound(1);
                 },
                 child: const Text(''),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.orange),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(2);
                 },
                 child: const Text(''),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.yellow),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note3.wav'));
+                  playSound(3);
                 },
                 child: const Text(''),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.green),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note4.wav'));
+                  playSound(4);
                 },
                 child: const Text(''),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.blue),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note5.wav'));
+                  playSound(5);
                 },
                 child: const Text(''),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.indigo),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note6.wav'));
+                  playSound(6);
                 },
                 child: const Text(''),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.purple),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note7.wav'));
+                  playSound(7);
                 },
                 child: const Text(''),
               ),
